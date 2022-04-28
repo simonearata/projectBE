@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wallets",
+  "info": {
+    "singularName": "wallet",
+    "pluralName": "wallets",
+    "displayName": "Wallet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "stocks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::stock.stock",
+      "inversedBy": "wallets"
+    }
+  }
+}
